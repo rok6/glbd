@@ -126,6 +126,62 @@ li {
   justify-content: center;
   letter-spacing: 0.1em;
 }
+.select-content .select-content-nav-menu a {
+  position: relative;
+  display: inline-block;
+}
+.select-content .select-content-nav-menu h2 {
+  padding: 1.0rem 1.5rem 1.5rem;
+}
+.select-content .select-content-nav-menu a::before,
+.select-content .select-content-nav-menu a::after,
+.select-content .select-content-nav-menu h2::before,
+.select-content .select-content-nav-menu h2::after {
+  content: '';
+  position: absolute;
+  display: block;
+  background-color: #fff;
+  transition-property: width, height;
+  transition-duration: 300ms;
+  transition-timing-function: ease-out;
+}
+.select-content .select-content-nav-menu a::before,
+.select-content .select-content-nav-menu a::after {
+  width: 0;
+  height: 1px;
+}
+.select-content .select-content-nav-menu h2::before,
+.select-content .select-content-nav-menu h2::after {
+  width: 1px;
+  height: 0;
+}
+.select-content .select-content-nav-menu a::before {
+  top: 0;
+  right: 0;
+}
+.select-content .select-content-nav-menu a::after {
+  bottom: 0;
+  left: 0;
+}
+.select-content .select-content-nav-menu h2::before {
+  top: 0;
+  left: 0;
+}
+.select-content .select-content-nav-menu h2::after {
+  bottom: 0;
+  right: 0;
+}
+.select-content .select-content-nav-menu a:hover {
+  color: #fff;
+}
+.select-content .select-content-nav-menu a:hover::before,
+.select-content .select-content-nav-menu a:hover::after {
+  width: 100%;
+}
+.select-content .select-content-nav-menu a:hover h2::before,
+.select-content .select-content-nav-menu a:hover h2::after {
+  height: 100%;
+}
 @media (max-width: 1200px) {
   .select-content .container {
     padding-left: 6.5rem;
